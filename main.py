@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import os
+import requests
 
 st.title("📝 User Input Form")
 
@@ -23,5 +25,5 @@ if submit:
 else:
     st.info("Fill out the form and hit submit!")
 
-st.write("hello")
-st.write("hi")
+st.write("Loaded API Key:", os.getenv("OPENWEATHER_API_KEY"))
+
